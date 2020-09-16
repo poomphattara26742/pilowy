@@ -1,0 +1,38 @@
+.card-pd img_product{
+    width: 525px;
+    height: 385px;
+    left: 96px;
+    top: 641px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+
+.card-pd {
+background-color: #f7f7f7;
+border: none;
+text-align: center;
+cursor: pointer;
+padding: 2rem;
+
+font-family: Ropa Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 29px;
+
+
+}
+
+img_icon {
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 7px;
+
+}
