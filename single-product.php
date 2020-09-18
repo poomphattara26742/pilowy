@@ -3,18 +3,7 @@
 
 <?php
 require("head.html");
-require("connectDB.php");
-if (isset($_GET['id'])) {
-    $sql = 'SELECT product.id,product.name,product.img,product.price as product_price,product.detail FROM product WHERE id = \'' . $_GET['id'] . '\'';
-    $rs = selectAll($db, $sql);
-    //print_r($rs);
-    echo "<br>";
 
-    $record = array();
-    foreach ($rs as $row) {
-        $record[] = $row;
-    }
-}
 ?>
 
 <body>
@@ -54,13 +43,8 @@ require("header.php");
                     <p>
                         <?php echo $record[0]['detail']; ?>
                     </p>
-                    <?php
-                    if (isset($_SESSION['id'])) {
-                        $page = "cart.php?add=" . $record[0]['id'];
-                    } else {
-                        $page = "login.php";
-                    }
-                    ?>
+                    
+                    
                     <form action="<?php echo $page; ?>" method="POST">
                         <div class="card_area border-circle-square mt-3 pb-5">
                             <p>จำนวน</p>
